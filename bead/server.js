@@ -6,11 +6,11 @@ var flash = require('connect-flash');
 
 var Waterline = require('waterline');
 var waterlineConfig = require('./config/waterline');
-var errorCollection = require('./models/error');
+var subjectCollection = require('./models/subject');
 var userCollection = require('./models/user');
 
 var indexController = require('./controllers/index');
-var errorController = require('./controllers/error');
+var subjectController = require('./controllers/subject');
 var loginController = require('./controllers/login');
 
 //-------------------------------------------
@@ -100,7 +100,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(session({
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 600000 },
     secret: 'titkos szoveg',
     resave: false,
     saveUninitialized: false,
@@ -114,12 +114,11 @@ app.use(setLocalsForLayout());
 
 //endpoints
 app.use('/', indexController);
-// app.use('/errors', errorController);
-app.use('/errors', ensureAuthenticated, errorController);
+app.use('/subjects', ensureAuthenticated, subjectController);
 app.use('/login', loginController);
 
-app.get('/operator', ensureAuthenticated, andRestrictTo('operator'), function(req, res) {
-    res.end('operator');
+app.get('/teacher', ensureAuthenticated, andRestrictTo('teacher'), function(req, res) {
+    res.end('teacher');
 });
 app.get('/logout', function(req, res){
     req.logout();
@@ -128,7 +127,7 @@ app.get('/logout', function(req, res){
 
 // ORM példány
 var orm = new Waterline();
-orm.loadCollection(Waterline.Collection.extend(errorCollection));
+orm.loadCollection(Waterline.Collection.extend(subjectCollection));
 orm.loadCollection(Waterline.Collection.extend(userCollection));
 
 // ORM indítása

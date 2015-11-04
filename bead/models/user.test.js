@@ -1,4 +1,4 @@
-var expect = require("chai").expect;
+/*var expect = require("chai").expect;
 var bcrypt = require('bcryptjs');
 
 var Waterline = require('waterline');
@@ -85,4 +85,4 @@ describe('UserModel', function () {
         });
     });
 
-});
+});*/

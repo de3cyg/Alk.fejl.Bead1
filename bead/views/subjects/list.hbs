@@ -1,0 +1,56 @@
+{{#each messages}}
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+    <h1>Tárgyak listája
+        {{#if isTeacher}}
+            
+        {{else}}
+            
+        {{/if}}
+    </h1>
+</div>
+
+{{#if isTeacher}}
+{{else}} 
+   <!-- <form method="post">      -->
+{{/if}}
+
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>Tárgy kódja</th>
+            <th>Tárgy neve</th>
+            <th>Kredit</th>
+            <th>Oktató</th>
+        </tr>   
+    </thead>
+    <tbody>
+        {{#each subjects}}
+        <tr>
+            <td>{{subject_code}}</td>
+            <td>{{subject_name}}</td>
+            <td>{{credit}}</td>
+            <td>{{teacher}}</td>
+            {{#if isTeacher}}
+                <!-- -->
+            {{else}}  
+                <td><p><a href="mysubjects" class="btn btn-default btn-sm" name="{{subject_code}}">Felvesz</a></p></td>
+                <!--<td><input type="checkbox" class="subject-checkbox" {{data.chk}}></td>-->
+                <!-- {{isTeacher}} -->
+            {{/if}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{#if isTeacher}}
+    <p><a href="/subjects/new" class="btn btn-default">Új tárgy hozzáadása</a></p>
+{{else}}
+<!--    <button type="submit" class="btn">Kijelöltek felvétele</button>
+    </form> -->
+{{/if}}
+

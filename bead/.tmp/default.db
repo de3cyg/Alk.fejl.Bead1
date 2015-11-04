@@ -1,96 +1,116 @@
 {
   "data": {
-    "error": [
+    "subject": [
       {
-        "status": "new",
-        "location": "qqq",
-        "description": "www",
-        "date": "2015-10-05T12:26:43.855Z",
-        "createdAt": "2015-10-05T12:26:43.857Z",
-        "updatedAt": "2015-10-05T12:26:43.857Z",
+        "subject_code": "IP-valami",
+        "subject_name": "asd",
+        "credit": "3",
+        "teacher": "asd",
+        "createdAt": "2015-11-04T11:33:32.846Z",
+        "updatedAt": "2015-11-04T11:33:32.846Z",
         "id": 1
       },
       {
-        "status": "new",
-        "location": "wegvwergvb",
-        "description": "berwherh",
-        "date": "2015-10-05T12:30:37.981Z",
-        "createdAt": "2015-10-05T12:30:37.982Z",
-        "updatedAt": "2015-10-05T12:30:37.982Z",
+        "subject_code": "IP-Al15",
+        "subject_name": "Alkalmazások Fejlesztése",
+        "credit": "2",
+        "teacher": "Balázs undefined",
+        "createdAt": "2015-11-04T11:36:34.154Z",
+        "updatedAt": "2015-11-04T11:36:34.154Z",
         "id": 2
       },
       {
-        "status": "new",
-        "location": "pc6",
-        "description": "rossz",
-        "date": "2015-10-12T13:26:28.596Z",
-        "createdAt": "2015-10-12T13:26:28.597Z",
-        "updatedAt": "2015-10-12T13:26:28.597Z",
+        "subject_code": "IP-as15",
+        "subject_name": "asd",
+        "credit": "3",
+        "teacher": "Baukó Balázs",
+        "createdAt": "2015-11-04T11:46:57.488Z",
+        "updatedAt": "2015-11-04T11:46:57.488Z",
         "id": 3
       },
       {
-        "status": "new",
-        "location": "pc6",
-        "description": "rossz",
-        "date": "2015-10-12T13:27:03.715Z",
-        "createdAt": "2015-10-12T13:27:03.715Z",
-        "updatedAt": "2015-10-12T13:27:03.715Z",
+        "subject_code": "IP-Új15",
+        "subject_name": "Új tárgy",
+        "credit": "5",
+        "teacher": "Baukó Balázs",
+        "createdAt": "2015-11-04T11:58:07.140Z",
+        "updatedAt": "2015-11-04T11:58:07.140Z",
         "id": 4
       },
       {
-        "status": "new",
-        "location": "pc6",
-        "description": "rossz",
-        "date": "2015-10-12T13:29:27.426Z",
-        "createdAt": "2015-10-12T13:29:27.426Z",
-        "updatedAt": "2015-10-12T13:29:27.426Z",
+        "subject_code": "IP-aundefined15",
+        "subject_name": "a",
+        "credit": "0",
+        "teacher": "Baukó Balázs",
+        "createdAt": "2015-11-04T12:08:31.306Z",
+        "updatedAt": "2015-11-04T12:08:31.306Z",
         "id": 5
+      },
+      {
+        "subject_code": "IP- undefined15",
+        "subject_name": " ",
+        "credit": "3",
+        "teacher": "Baukó Balázs",
+        "createdAt": "2015-11-04T12:08:59.040Z",
+        "updatedAt": "2015-11-04T12:08:59.040Z",
+        "id": 6
+      },
+      {
+        "subject_code": "IP-al15",
+        "subject_name": "alma",
+        "credit": "3",
+        "teacher": "Kis Béla",
+        "createdAt": "2015-11-04T12:41:06.208Z",
+        "updatedAt": "2015-11-04T12:41:06.208Z",
+        "id": 7
+      },
+      {
+        "subject_code": "IP-Mé15",
+        "subject_name": "Még egy tárgy",
+        "credit": "3",
+        "teacher": "Baukó Balázs",
+        "createdAt": "2015-11-04T15:19:32.711Z",
+        "updatedAt": "2015-11-04T15:19:32.711Z",
+        "id": 8
       }
     ],
     "user": [
       {
-        "surname": "q",
-        "forename": "q",
-        "neptun": "q",
-        "password": "q",
+        "surname": "Baukó",
+        "forename": "Balázs",
+        "neptun": "de3cyg",
+        "password": "$2a$10$r3Z4cV8NUpy4BXZgxyNaJu980RygrKcniLQkPa7msUWTVzgBXKKM.",
         "avatar": "",
-        "role": "riporter",
-        "createdAt": "2015-10-12T12:09:54.312Z",
-        "updatedAt": "2015-10-12T12:09:54.312Z",
-        "id": 2
+        "role": "teacher",
+        "createdAt": "2015-11-04T10:33:23.450Z",
+        "updatedAt": "2015-11-04T10:33:23.450Z",
+        "id": 1
       },
       {
-        "surname": "Horváth",
-        "forename": "Győző",
-        "neptun": "k81dnc",
-        "password": "$2a$10$KIpMlrBNk9sGrgluiEbHKeA/U5qU14cri.tWWGydKMU8w1FLFcDpq",
+        "surname": "Kis",
+        "forename": "Béla",
+        "neptun": "k1sg3c",
+        "password": "$2a$10$nBPhr4c6cglkpWT10XR1q.yPyjNPy.RHoJNFGAYqcMTnl8.j.KiG6",
         "avatar": "",
-        "role": "riporter",
-        "createdAt": "2015-10-12T12:42:24.139Z",
-        "updatedAt": "2015-10-12T12:42:24.139Z",
-        "id": 3
+        "role": "student",
+        "createdAt": "2015-11-04T12:40:42.567Z",
+        "updatedAt": "2015-11-04T12:40:42.567Z",
+        "id": 2
       }
     ]
   },
   "schema": {
-    "error": {
-      "date": {
-        "type": "datetime"
-      },
-      "status": {
-        "type": "string",
-        "enum": [
-          "new",
-          "assigned",
-          "success",
-          "rejected",
-          "pending"
-        ]
-      },
-      "location": {
+    "subject": {
+      "subject_code": {
         "type": "string"
       },
-      "description": {
+      "subject_name": {
+        "type": "string"
+      },
+      "teacher": {
+        "type": "string"
+      },
+      "credit": {
         "type": "string"
       },
       "user": {
@@ -126,16 +146,13 @@
       "forename": {
         "type": "string"
       },
-      "avatar": {
-        "type": "string"
-      },
       "role": {
         "type": "string",
         "enum": [
-          "riporter",
-          "operator"
+          "student",
+          "teacher"
         ],
-        "defaultsTo": "riporter"
+        "defaultsTo": "student"
       },
       "id": {
         "type": "integer",
@@ -152,11 +169,11 @@
     }
   },
   "counters": {
-    "error": {
-      "id": 5
+    "subject": {
+      "id": 8
     },
     "user": {
-      "id": 3
+      "id": 2
     }
   }
 }

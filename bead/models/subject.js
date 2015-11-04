@@ -1,28 +1,26 @@
 module.exports = {
-    identity: 'error',
+    identity: 'subject',
     connection: 'default',
     attributes: {
-        date: {
-            type: 'datetime',
-            defaultsTo: function () { return new Date(); },
-            required: true,
-        },
-        status: {
-            type: 'string',
-            enum: ['new', 'assigned', 'success', 'rejected', 'pending'],
-            required: true,
-        },
-        location: {
+        subject_code: {
             type: 'string',
             required: true,
         },
-        description: {
+        subject_name: {
             type: 'string',
             required: true,
         },
-        
+        teacher: {
+            type: 'string',
+            required: true,
+        },
+        credit: {
+            type: 'string',
+            required: true,
+        },
         user: {
-            model: 'user',
-        },
+            model: 'user'
+            
+        }
     }
 }
