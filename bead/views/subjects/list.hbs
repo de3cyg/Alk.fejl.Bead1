@@ -7,17 +7,12 @@
 
 <div class="page-header">
     <h1>Tárgyak listája
-        {{#if isTeacher}}
-            
-        {{else}}
-            
-        {{/if}}
     </h1>
 </div>
 
 {{#if isTeacher}}
 {{else}} 
-   <!-- <form method="post">      -->
+   <form method="post" class="form">
 {{/if}}
 
 <table class="table table-striped table-hover ">
@@ -37,11 +32,10 @@
             <td>{{credit}}</td>
             <td>{{teacher}}</td>
             {{#if isTeacher}}
-                <!-- -->
+                <!-- ennek kéne megjelennie, ha tanár lép be...-->
             {{else}}  
-                <td><p><a href="mysubjects" class="btn btn-default btn-sm" name="{{subject_code}}">Felvesz</a></p></td>
-                <!--<td><input type="checkbox" class="subject-checkbox" {{data.chk}}></td>-->
-                <!-- {{isTeacher}} -->
+               <!-- <td><p><a href="add" class="btn btn-default btn-sm" name="{{subject_code}}">Felvesz</a></p></td>-->
+                <td><input type="checkbox" class="subject-checkbox" name="{{subject_code}}" id="{{subject_code}}"></td>
             {{/if}}
         </tr>
         {{/each}}
@@ -50,7 +44,7 @@
 {{#if isTeacher}}
     <p><a href="/subjects/new" class="btn btn-default">Új tárgy hozzáadása</a></p>
 {{else}}
-<!--    <button type="submit" class="btn">Kijelöltek felvétele</button>
-    </form> -->
+<button type="submit" class="btn btn-primary">Kijelöltek felvétele</button>
+    </form>
 {{/if}}
 

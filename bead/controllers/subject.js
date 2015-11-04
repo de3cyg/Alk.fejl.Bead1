@@ -21,6 +21,42 @@ router.get('/list', function (req, res) {
 });
 
 
+router.post('/list',function(req, res) {
+    
+    var subs = [];
+    req.app.models.subject.find().then(function(subjects){
+      for(var i=0; i<subjects.length; i++){
+          if(req.body[subjects[i].subject_code]=='on'){
+              subs.push(subjects[i].subject_code);
+              
+          }
+      }
+      
+    req.app.models.subject_list.findOne({'userid': req.user.id}).then(function(s){
+        console.log(s);
+            subs=subs.concat(s.code);
+            req.app.models.subject_list.destroy({'userid': req.user.id}).then(function(suc,err){
+            //console.log('deleted: '+suc);
+             });
+             subs=arrayUnique(subs),
+            req.app.models.subject_list.create({
+                    code: subs,
+                    userid: req.user.id
+                })
+                .then(function (subject) {
+                    //siker
+                    //req.flash('info', 'Tárgy sikeresen felvéve!');
+                    res.redirect('/subjects/mysubjects');
+                })
+                .catch(function (err) {
+                    //hiba
+                    console.log(err);
+                    res.redirect('/subjects/list');
+            });
+    });
+    });
+});
+
 
 router.get('/mysubjects',function(req,res){
     var mySubs = [];
@@ -32,27 +68,35 @@ router.get('/mysubjects',function(req,res){
                     //console.log(subjects[i]);
                     mySubs.push(subjects[i]);
                 }
-            }   
+            } 
+            res.render('subjects/list', {
+                subjects: mySubs,
+                isTeacher: isTeacher(req.user.role)
+            });
         });
     } else {
-        //ide jön a diák tárgyainak kilistázása...
-        req.app.models.subject.find().then(function(subjects){
-           req.app.models.subject_list.find(req.user).then(function(list){
-                for(var i=0; i<subjects.length; i++){
-                    for(var j=0; j<list.code.length; j++){
-                        if(subjects[i].subject_code == list.code[i]){
-                            mySubs.push(subjects[i]);
-                        }
-                    }
-                }  
+        req.app.models.subject_list.findOne({'userid': req.user.id}).then(function(subjects){
+          console.log(typeof subjects);
+           req.app.models.subject.find().then(function(s){
+               for(var j=0; j<s.length; j++){
+                for(var i=0; i<subjects.code.length; i++)
+                {
+                    if(s[j].subject_code==subjects.code[i]){
+                        mySubs.push(s[j]);
+                    }    
+                }
+               }
+                res.render('subjects/list', {
+                     subjects: mySubs,
+                     isTeacher: isTeacher(req.user.role)
+                });  
            });
         });
-    }
+          
     
-    res.render('subjects/list', {
-        subjects: mySubs,
-        isTeacher: isTeacher(req.user.role)
-    });
+    
+}
+
 });
 
 router.get('/new', function (req, res) {
@@ -67,8 +111,7 @@ router.get('/new', function (req, res) {
 router.post('/new', function (req, res) {
     // adatok ellenőrzése
     req.checkBody('subject_name', 'Hibás tárgynév').notEmpty().withMessage('Kötelező megadni!');
-   
-    //req.sanitizeBody('credit').escape();
+
    
     req.checkBody('credit', 'Hibás kredit').notEmpty().withMessage('Kötelező megadni!');
     
@@ -96,7 +139,7 @@ router.post('/new', function (req, res) {
         })
         .then(function (subject) {
             //siker
-            req.flash('info', 'Tárgy sikeresen felvéve!');
+            req.flash('info', 'Tárgy sikeresen hozzáadva!');
             res.redirect('/subjects/list');
         })
         .catch(function (err) {
@@ -108,3 +151,15 @@ router.post('/new', function (req, res) {
 });
 
 module.exports = router;
+
+function arrayUnique(array) {
+    var a = array.concat();
+    for(var i=0; i<a.length; ++i) {
+        for(var j=i+1; j<a.length; ++j) {
+            if(a[i] === a[j])
+                a.splice(j--, 1);
+        }
+    }
+
+    return a;
+}

@@ -2,100 +2,181 @@
   "data": {
     "subject": [
       {
-        "subject_code": "IP-valami",
-        "subject_name": "asd",
+        "subject_code": "IP-as15",
+        "subject_name": "asdadasads",
         "credit": "3",
-        "teacher": "asd",
-        "createdAt": "2015-11-04T11:33:32.846Z",
-        "updatedAt": "2015-11-04T11:33:32.846Z",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T20:21:27.585Z",
+        "updatedAt": "2015-11-04T20:21:27.585Z",
         "id": 1
       },
       {
-        "subject_code": "IP-Al15",
-        "subject_name": "Alkalmazások Fejlesztése",
-        "credit": "2",
-        "teacher": "Balázs undefined",
-        "createdAt": "2015-11-04T11:36:34.154Z",
-        "updatedAt": "2015-11-04T11:36:34.154Z",
+        "subject_code": "IP-ll15",
+        "subject_name": "lldldld",
+        "credit": "1",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T20:21:34.422Z",
+        "updatedAt": "2015-11-04T20:21:34.422Z",
         "id": 2
       },
       {
-        "subject_code": "IP-as15",
-        "subject_name": "asd",
-        "credit": "3",
-        "teacher": "Baukó Balázs",
-        "createdAt": "2015-11-04T11:46:57.488Z",
-        "updatedAt": "2015-11-04T11:46:57.488Z",
+        "subject_code": "IP-pp15",
+        "subject_name": "pppppp",
+        "credit": "1",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T20:21:41.406Z",
+        "updatedAt": "2015-11-04T20:21:41.406Z",
         "id": 3
       },
       {
-        "subject_code": "IP-Új15",
-        "subject_name": "Új tárgy",
+        "subject_code": "IP-uj15",
+        "subject_name": "uj tary",
         "credit": "5",
-        "teacher": "Baukó Balázs",
-        "createdAt": "2015-11-04T11:58:07.140Z",
-        "updatedAt": "2015-11-04T11:58:07.140Z",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T20:26:13.825Z",
+        "updatedAt": "2015-11-04T20:26:13.825Z",
         "id": 4
       },
       {
-        "subject_code": "IP-aundefined15",
-        "subject_name": "a",
-        "credit": "0",
-        "teacher": "Baukó Balázs",
-        "createdAt": "2015-11-04T12:08:31.306Z",
-        "updatedAt": "2015-11-04T12:08:31.306Z",
+        "subject_code": "IP-uz15",
+        "subject_name": "uzhank",
+        "credit": "33",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T20:26:22.640Z",
+        "updatedAt": "2015-11-04T20:26:22.640Z",
         "id": 5
       },
       {
-        "subject_code": "IP- undefined15",
-        "subject_name": " ",
-        "credit": "3",
-        "teacher": "Baukó Balázs",
-        "createdAt": "2015-11-04T12:08:59.040Z",
-        "updatedAt": "2015-11-04T12:08:59.040Z",
+        "subject_code": "IP-bí15",
+        "subject_name": "bírka",
+        "credit": "1",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T20:30:41.130Z",
+        "updatedAt": "2015-11-04T20:30:41.130Z",
         "id": 6
       },
       {
-        "subject_code": "IP-al15",
-        "subject_name": "alma",
-        "credit": "3",
-        "teacher": "Kis Béla",
-        "createdAt": "2015-11-04T12:41:06.208Z",
-        "updatedAt": "2015-11-04T12:41:06.208Z",
+        "subject_code": "IP-ma15",
+        "subject_name": "majom",
+        "credit": "4",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T20:30:48.347Z",
+        "updatedAt": "2015-11-04T20:30:48.347Z",
         "id": 7
       },
       {
-        "subject_code": "IP-Mé15",
-        "subject_name": "Még egy tárgy",
-        "credit": "3",
-        "teacher": "Baukó Balázs",
-        "createdAt": "2015-11-04T15:19:32.711Z",
-        "updatedAt": "2015-11-04T15:19:32.711Z",
+        "subject_code": "IP-op15",
+        "subject_name": "opo",
+        "credit": "4",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T21:19:50.073Z",
+        "updatedAt": "2015-11-04T21:19:50.073Z",
         "id": 8
+      },
+      {
+        "subject_code": "IP-an15",
+        "subject_name": "anal",
+        "credit": "3",
+        "teacher": "A Tanár",
+        "createdAt": "2015-11-04T21:19:57.250Z",
+        "updatedAt": "2015-11-04T21:19:57.250Z",
+        "id": 9
       }
     ],
     "user": [
       {
+        "surname": "A",
+        "forename": "Tanár",
+        "neptun": "tanar",
+        "password": "$2a$10$cTFd0muPdV6B1g6btqSCye11hWcJRsMbHbtitTtGz42Cv/qi/l3m6",
+        "teacher": "on",
+        "role": "teacher",
+        "createdAt": "2015-11-04T20:21:01.298Z",
+        "updatedAt": "2015-11-04T20:21:01.298Z",
+        "id": 1
+      },
+      {
         "surname": "Baukó",
         "forename": "Balázs",
         "neptun": "de3cyg",
-        "password": "$2a$10$r3Z4cV8NUpy4BXZgxyNaJu980RygrKcniLQkPa7msUWTVzgBXKKM.",
-        "avatar": "",
-        "role": "teacher",
-        "createdAt": "2015-11-04T10:33:23.450Z",
-        "updatedAt": "2015-11-04T10:33:23.450Z",
-        "id": 1
+        "password": "$2a$10$jmLGBvBKWFhzwrqbXQ1N1OE/yUzEgQmGdOdFyItWKqHAvMWbDsWGy",
+        "role": "student",
+        "createdAt": "2015-11-04T20:21:16.056Z",
+        "updatedAt": "2015-11-04T20:21:16.056Z",
+        "id": 2
       },
       {
         "surname": "Kis",
         "forename": "Béla",
         "neptun": "k1sg3c",
-        "password": "$2a$10$nBPhr4c6cglkpWT10XR1q.yPyjNPy.RHoJNFGAYqcMTnl8.j.KiG6",
-        "avatar": "",
+        "password": "$2a$10$0YmVSpheIJyvplOHk0OwCO7atIwiRVbdrwcG7lyTDLH5kl0Yg98WO",
         "role": "student",
-        "createdAt": "2015-11-04T12:40:42.567Z",
-        "updatedAt": "2015-11-04T12:40:42.567Z",
-        "id": 2
+        "createdAt": "2015-11-04T20:31:07.853Z",
+        "updatedAt": "2015-11-04T20:31:07.853Z",
+        "id": 3
+      },
+      {
+        "surname": "Új",
+        "forename": "Diák",
+        "neptun": "udiak",
+        "password": "$2a$10$BQfqnCwPLf0p0iWYgDB1GeMxgTOjPzLI3oG5N1DQ7prvNQmzirIwG",
+        "role": "student",
+        "createdAt": "2015-11-04T20:57:46.643Z",
+        "updatedAt": "2015-11-04T20:57:46.643Z",
+        "id": 4
+      },
+      {
+        "surname": "A",
+        "forename": "3",
+        "neptun": "asd",
+        "password": "$2a$10$HIECmpikLs8aHzwEGIl8guu6vNSqEMjlylK59OrTyWVzXD7Fr5deW",
+        "role": "student",
+        "createdAt": "2015-11-04T21:06:04.487Z",
+        "updatedAt": "2015-11-04T21:06:04.487Z",
+        "id": 5
+      }
+    ],
+    "subject_list": [
+      {
+        "code": [
+          "IP-as15",
+          "IP-ll15",
+          "IP-pp15",
+          "IP-uj15",
+          "IP-uz15",
+          "IP-bí15",
+          "IP-ma15",
+          "IP-op15",
+          "IP-an15"
+        ],
+        "userid": 4,
+        "createdAt": "2015-11-04T21:20:12.373Z",
+        "updatedAt": "2015-11-04T21:20:12.373Z",
+        "id": 12
+      },
+      {
+        "code": [],
+        "userid": 5,
+        "createdAt": "2015-11-04T21:37:36.762Z",
+        "updatedAt": "2015-11-04T21:37:36.762Z",
+        "id": 29
+      },
+      {
+        "code": [
+          "IP-as15",
+          "IP-ll15",
+          "IP-pp15",
+          "IP-uj15",
+          "IP-uz15",
+          "IP-bí15",
+          "IP-ma15",
+          "IP-op15",
+          "IP-an15"
+        ],
+        "userid": 2,
+        "createdAt": "2015-11-04T22:40:53.638Z",
+        "updatedAt": "2015-11-04T22:40:53.638Z",
+        "id": 73
       }
     ]
   },
@@ -166,14 +247,31 @@
       "updatedAt": {
         "type": "datetime"
       }
+    },
+    "subject_list": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
     }
   },
   "counters": {
     "subject": {
-      "id": 8
+      "id": 9
     },
     "user": {
-      "id": 2
+      "id": 5
+    },
+    "subject_list": {
+      "id": 73
     }
   }
 }

@@ -43,6 +43,9 @@ module.exports = {
                 return next(err);
             }
             values.password = hash;
+            if(values.teacher == 'on') {
+                values.role = 'teacher';
+            };
             next();
         });
     },
