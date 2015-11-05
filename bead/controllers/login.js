@@ -20,7 +20,7 @@ router.get('/signup', function (req, res) {
     });
 });
 router.post('/signup', passport.authenticate('local-signup', {
-    successRedirect:    '/login',
+    successRedirect:    '/subjects/list',
     failureRedirect:    '/login/signup',
     failureFlash:       true,
     badRequestMessage:  'Hiányzó adatok'

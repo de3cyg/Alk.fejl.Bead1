@@ -6,8 +6,15 @@
 {{/each}}
 
 <div class="page-header">
-    <h1>Tárgyak listája
-    </h1>
+    {{#if button}}
+        <h1>Tárgyak listája</h1>
+    {{else}}
+        {{#if isTeacher}}
+            <h1>Oktatott tárgyaim</h1>
+        {{else}}
+            <h1>Felvett tárgyaim</h1>
+        {{/if}}
+    {{/if}}
 </div>
 
 {{#if isTeacher}}
@@ -41,10 +48,11 @@
         {{/each}}
     </tbody>
 </table>
-{{#if isTeacher}}
-    <p><a href="/subjects/new" class="btn btn-default">Új tárgy hozzáadása</a></p>
-{{else}}
-<button type="submit" class="btn btn-primary">Kijelöltek felvétele</button>
-    </form>
+{{#if button}}
+    {{#if isTeacher}}
+        <p><a href="/subjects/new" class="btn btn-default">Új tárgy hozzáadása</a></p>
+    {{else}}
+    <button type="submit" class="btn btn-primary">Kijelöltek felvétele</button>
+        </form>
+    {{/if}}
 {{/if}}
-

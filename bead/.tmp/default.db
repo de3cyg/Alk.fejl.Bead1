@@ -2,181 +2,75 @@
   "data": {
     "subject": [
       {
-        "subject_code": "IP-as15",
-        "subject_name": "asdadasads",
-        "credit": "3",
+        "subject_code": "IP-An153",
+        "subject_name": "Analízis 3",
+        "credit": "2",
         "teacher": "A Tanár",
-        "createdAt": "2015-11-04T20:21:27.585Z",
-        "updatedAt": "2015-11-04T20:21:27.585Z",
+        "createdAt": "2015-11-05T21:20:38.772Z",
+        "updatedAt": "2015-11-05T21:20:38.772Z",
         "id": 1
       },
       {
-        "subject_code": "IP-ll15",
-        "subject_name": "lldldld",
-        "credit": "1",
-        "teacher": "A Tanár",
-        "createdAt": "2015-11-04T20:21:34.422Z",
-        "updatedAt": "2015-11-04T20:21:34.422Z",
-        "id": 2
-      },
-      {
-        "subject_code": "IP-pp15",
-        "subject_name": "pppppp",
-        "credit": "1",
-        "teacher": "A Tanár",
-        "createdAt": "2015-11-04T20:21:41.406Z",
-        "updatedAt": "2015-11-04T20:21:41.406Z",
-        "id": 3
-      },
-      {
-        "subject_code": "IP-uj15",
-        "subject_name": "uj tary",
-        "credit": "5",
-        "teacher": "A Tanár",
-        "createdAt": "2015-11-04T20:26:13.825Z",
-        "updatedAt": "2015-11-04T20:26:13.825Z",
-        "id": 4
-      },
-      {
-        "subject_code": "IP-uz15",
-        "subject_name": "uzhank",
-        "credit": "33",
-        "teacher": "A Tanár",
-        "createdAt": "2015-11-04T20:26:22.640Z",
-        "updatedAt": "2015-11-04T20:26:22.640Z",
-        "id": 5
-      },
-      {
-        "subject_code": "IP-bí15",
-        "subject_name": "bírka",
-        "credit": "1",
-        "teacher": "A Tanár",
-        "createdAt": "2015-11-04T20:30:41.130Z",
-        "updatedAt": "2015-11-04T20:30:41.130Z",
-        "id": 6
-      },
-      {
-        "subject_code": "IP-ma15",
-        "subject_name": "majom",
-        "credit": "4",
-        "teacher": "A Tanár",
-        "createdAt": "2015-11-04T20:30:48.347Z",
-        "updatedAt": "2015-11-04T20:30:48.347Z",
-        "id": 7
-      },
-      {
-        "subject_code": "IP-op15",
-        "subject_name": "opo",
-        "credit": "4",
-        "teacher": "A Tanár",
-        "createdAt": "2015-11-04T21:19:50.073Z",
-        "updatedAt": "2015-11-04T21:19:50.073Z",
-        "id": 8
-      },
-      {
-        "subject_code": "IP-an15",
-        "subject_name": "anal",
+        "subject_code": "IP-Mo15k",
+        "subject_name": "Modellek és algoritmusok",
         "credit": "3",
         "teacher": "A Tanár",
-        "createdAt": "2015-11-04T21:19:57.250Z",
-        "updatedAt": "2015-11-04T21:19:57.250Z",
-        "id": 9
+        "createdAt": "2015-11-05T21:21:08.154Z",
+        "updatedAt": "2015-11-05T21:21:08.154Z",
+        "id": 2
       }
     ],
     "user": [
       {
-        "surname": "A",
-        "forename": "Tanár",
-        "neptun": "tanar",
-        "password": "$2a$10$cTFd0muPdV6B1g6btqSCye11hWcJRsMbHbtitTtGz42Cv/qi/l3m6",
-        "teacher": "on",
-        "role": "teacher",
-        "createdAt": "2015-11-04T20:21:01.298Z",
-        "updatedAt": "2015-11-04T20:21:01.298Z",
-        "id": 1
-      },
-      {
         "surname": "Baukó",
         "forename": "Balázs",
         "neptun": "de3cyg",
-        "password": "$2a$10$jmLGBvBKWFhzwrqbXQ1N1OE/yUzEgQmGdOdFyItWKqHAvMWbDsWGy",
+        "password": "$2a$10$s50EcBeluQ4BxlDRgbRj6usnjIFoxjihyAm6P.YKaGujmG.TTC4Py",
         "role": "student",
-        "createdAt": "2015-11-04T20:21:16.056Z",
-        "updatedAt": "2015-11-04T20:21:16.056Z",
+        "createdAt": "2015-11-05T21:14:49.487Z",
+        "updatedAt": "2015-11-05T21:14:49.488Z",
+        "id": 1
+      },
+      {
+        "surname": "A",
+        "forename": "Tanár",
+        "neptun": "tanar",
+        "password": "$2a$10$GH/VOFPRLyHYjjRSB8nYQOaicIzN8g/20ciqW5gIgCT41pqefTKye",
+        "teacher": "on",
+        "role": "teacher",
+        "createdAt": "2015-11-05T21:17:10.552Z",
+        "updatedAt": "2015-11-05T21:17:10.552Z",
         "id": 2
       },
       {
         "surname": "Kis",
         "forename": "Béla",
         "neptun": "k1sg3c",
-        "password": "$2a$10$0YmVSpheIJyvplOHk0OwCO7atIwiRVbdrwcG7lyTDLH5kl0Yg98WO",
+        "password": "$2a$10$sNYsIjXnqhmpAIPdNKqSjeUtN6hnFNMSSw3DgMNizU49kWVii5Z/C",
         "role": "student",
-        "createdAt": "2015-11-04T20:31:07.853Z",
-        "updatedAt": "2015-11-04T20:31:07.853Z",
+        "createdAt": "2015-11-05T21:26:18.908Z",
+        "updatedAt": "2015-11-05T21:26:18.908Z",
         "id": 3
-      },
-      {
-        "surname": "Új",
-        "forename": "Diák",
-        "neptun": "udiak",
-        "password": "$2a$10$BQfqnCwPLf0p0iWYgDB1GeMxgTOjPzLI3oG5N1DQ7prvNQmzirIwG",
-        "role": "student",
-        "createdAt": "2015-11-04T20:57:46.643Z",
-        "updatedAt": "2015-11-04T20:57:46.643Z",
-        "id": 4
-      },
-      {
-        "surname": "A",
-        "forename": "3",
-        "neptun": "asd",
-        "password": "$2a$10$HIECmpikLs8aHzwEGIl8guu6vNSqEMjlylK59OrTyWVzXD7Fr5deW",
-        "role": "student",
-        "createdAt": "2015-11-04T21:06:04.487Z",
-        "updatedAt": "2015-11-04T21:06:04.487Z",
-        "id": 5
       }
     ],
     "subject_list": [
       {
         "code": [
-          "IP-as15",
-          "IP-ll15",
-          "IP-pp15",
-          "IP-uj15",
-          "IP-uz15",
-          "IP-bí15",
-          "IP-ma15",
-          "IP-op15",
-          "IP-an15"
+          "IP-An153"
         ],
-        "userid": 4,
-        "createdAt": "2015-11-04T21:20:12.373Z",
-        "updatedAt": "2015-11-04T21:20:12.373Z",
-        "id": 12
-      },
-      {
-        "code": [],
-        "userid": 5,
-        "createdAt": "2015-11-04T21:37:36.762Z",
-        "updatedAt": "2015-11-04T21:37:36.762Z",
-        "id": 29
+        "userid": 1,
+        "createdAt": "2015-11-05T21:21:39.868Z",
+        "updatedAt": "2015-11-05T21:21:39.868Z",
+        "id": 1
       },
       {
         "code": [
-          "IP-as15",
-          "IP-ll15",
-          "IP-pp15",
-          "IP-uj15",
-          "IP-uz15",
-          "IP-bí15",
-          "IP-ma15",
-          "IP-op15",
-          "IP-an15"
+          "IP-An153"
         ],
-        "userid": 2,
-        "createdAt": "2015-11-04T22:40:53.638Z",
-        "updatedAt": "2015-11-04T22:40:53.638Z",
-        "id": 73
+        "userid": 3,
+        "createdAt": "2015-11-05T21:26:44.643Z",
+        "updatedAt": "2015-11-05T21:26:44.643Z",
+        "id": 3
       }
     ]
   },
@@ -265,13 +159,13 @@
   },
   "counters": {
     "subject": {
-      "id": 9
+      "id": 2
     },
     "user": {
-      "id": 5
+      "id": 3
     },
     "subject_list": {
-      "id": 73
+      "id": 3
     }
   }
 }

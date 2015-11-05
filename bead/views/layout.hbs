@@ -33,6 +33,16 @@
                           {{#if isTeacher}}
                             (Tanár)
                           {{/if}}</a>
+                      {{#if loggedIn}}
+                      <a class="navbar-brand" href="/subjects/mysubjects">
+                          {{#if isTeacher}}
+                            Oktatott 
+                          {{else}}
+                            Felvett 
+                          {{/if}}
+                          tárgyaim
+                        </a>
+                      {{/if}}
                     </div>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

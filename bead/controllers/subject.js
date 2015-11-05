@@ -10,10 +10,10 @@ function isTeacher(role){
 
 router.get('/list', function (req, res) {
     req.app.models.subject.find().then(function(subjects){
-        //console.log(subjects);
         res.render('subjects/list', {
             subjects: subjects,
             isTeacher: isTeacher(req.user.role),
+            button: true
         });
         
     });
@@ -31,14 +31,16 @@ router.post('/list',function(req, res) {
               
           }
       }
-      
     req.app.models.subject_list.findOne({'userid': req.user.id}).then(function(s){
-        console.log(s);
-            subs=subs.concat(s.code);
-            req.app.models.subject_list.destroy({'userid': req.user.id}).then(function(suc,err){
-            //console.log('deleted: '+suc);
-             });
-             subs=arrayUnique(subs),
+        try {
+                subs=subs.concat(s.code);
+                req.app.models.subject_list.destroy({'userid': req.user.id}).then(function(suc,err){
+                 });
+        subs=arrayUnique(subs);
+            
+        } catch(err) {
+            
+        }
             req.app.models.subject_list.create({
                     code: subs,
                     userid: req.user.id
@@ -65,38 +67,41 @@ router.get('/mysubjects',function(req,res){
             for(var i = 0; i<subjects.length; i++){
                 if(subjects[i].teacher == req.user.surname+' '+req.user.forename)
                 {
-                    //console.log(subjects[i]);
                     mySubs.push(subjects[i]);
                 }
             } 
             res.render('subjects/list', {
                 subjects: mySubs,
-                isTeacher: isTeacher(req.user.role)
+                isTeacher: isTeacher(req.user.role),
+                button: false
             });
         });
     } else {
         req.app.models.subject_list.findOne({'userid': req.user.id}).then(function(subjects){
-          console.log(typeof subjects);
            req.app.models.subject.find().then(function(s){
-               for(var j=0; j<s.length; j++){
-                for(var i=0; i<subjects.code.length; i++)
-                {
-                    if(s[j].subject_code==subjects.code[i]){
-                        mySubs.push(s[j]);
-                    }    
-                }
+               try {
+                   for(var j=0; j<s.length; j++){
+                        for(var i=0; i<subjects.code.length; i++)
+                        {
+                            if(s[j].subject_code==subjects.code[i]){
+                                mySubs.push(s[j]);
+                            }    
+                        }
+                   }
+               } catch (err) {
+                   
                }
                 res.render('subjects/list', {
                      subjects: mySubs,
-                     isTeacher: isTeacher(req.user.role)
+                     isTeacher: isTeacher(req.user.role),
+                     button: false
                 });  
            });
         });
           
     
     
-}
-
+    }
 });
 
 router.get('/new', function (req, res) {
@@ -110,8 +115,7 @@ router.get('/new', function (req, res) {
 });
 router.post('/new', function (req, res) {
     // adatok ellenőrzése
-    req.checkBody('subject_name', 'Hibás tárgynév').notEmpty().withMessage('Kötelező megadni!');
-
+    req.checkBody('subject_name', 'Hibás tárgynév').notEmpty().withMessage('Kötelező megadni!').len(3,32).withMessage('Legalább 3 karakter!');
    
     req.checkBody('credit', 'Hibás kredit').notEmpty().withMessage('Kötelező megadni!');
     
@@ -127,7 +131,7 @@ router.post('/new', function (req, res) {
     else {
         // adatok elmentése (ld. később) és a hibalista megjelenítése
         
-        var code = 'IP-' +  req.body.subject_name[0] + req.body.subject_name[1] + '15';
+        var code = 'IP-' +  req.body.subject_name[0] + req.body.subject_name[1] + '15' + req.body.subject_name[req.body.subject_name.length-1];
         //var code = "IP-valami";
         //var teacherName = 'asd';
         var teacherName = req.user.surname+' '+req.user.forename;
