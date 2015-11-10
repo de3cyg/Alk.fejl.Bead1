@@ -8,7 +8,7 @@ module.exports = {
         },
         subject_name: {
             type: 'string',
-            required: true,
+            required: true
         },
         teacher: {
             type: 'string',
@@ -20,7 +20,6 @@ module.exports = {
         },
         user: {
             model: 'user'
-            
         }
     }
 }

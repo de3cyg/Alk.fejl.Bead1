@@ -6,21 +6,13 @@
 {{/each}}
 
 <div class="page-header">
-    {{#if button}}
-        <h1>Tárgyak listája</h1>
+    {{#if isTeacher}}
+     <h1>Összes tárgy</h1>
     {{else}}
-        {{#if isTeacher}}
-            <h1>Oktatott tárgyaim</h1>
-        {{else}}
-            <h1>Felvett tárgyaim</h1>
-        {{/if}}
+     <h1>Felvett tárgyaim</h1>
     {{/if}}
 </div>
-
-{{#if isTeacher}}
-{{else}} 
-   <form method="post" class="form">
-{{/if}}
+<form method="post" class="form">
 
 <table class="table table-striped table-hover ">
     <thead>
@@ -28,7 +20,7 @@
             <th>Tárgy kódja</th>
             <th>Tárgy neve</th>
             <th>Kredit</th>
-            <th>Oktató</th>
+            <th>Kijelölve</th>
         </tr>   
     </thead>
     <tbody>
@@ -37,22 +29,24 @@
             <td>{{subject_code}}</td>
             <td>{{subject_name}}</td>
             <td>{{credit}}</td>
-            <td>{{teacher}}</td>
-            {{#if isTeacher}}
-                <!-- ennek kéne megjelennie, ha tanár lép be...-->
-            {{else}}  
-               <!-- <td><p><a href="add" class="btn btn-default btn-sm" name="{{subject_code}}">Felvesz</a></p></td>-->
-                <td><input type="checkbox" class="subject-checkbox" name="{{subject_code}}" id="{{subject_code}}"></td>
-            {{/if}}
+            <td><input type="checkbox" class="subject-checkbox" name="{{id}}"></td>
         </tr>
         {{/each}}
+        <tr class="info">
+            {{#if isTeacher}}
+            {{else}}
+                <td>Összes felvett kredit:</td>
+                <td></td>
+                <td>{{sum}}</td>
+                <td></td>
+            {{/if}}
+        </tr>
     </tbody>
 </table>
-{{#if button}}
     {{#if isTeacher}}
-        <p><a href="/subjects/new" class="btn btn-default">Új tárgy hozzáadása</a></p>
+        <button type="submit" class="btn btn-primary">Kijelöltek törlése</button></p>
     {{else}}
-    <button type="submit" class="btn btn-primary">Kijelöltek felvétele</button>
-        </form>
+        <p><a href="/subjects/new" class="btn btn-default">Új tárgy felvétele</a>
+        <button type="submit" class="btn btn-primary">Kijelöltek leadása</button></p>
     {{/if}}
-{{/if}}
+</form>

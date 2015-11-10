@@ -8,7 +8,6 @@ var Waterline = require('waterline');
 var waterlineConfig = require('./config/waterline');
 var subjectCollection = require('./models/subject');
 var userCollection = require('./models/user');
-var listCollection = require('./models/subject_list');
 
 var indexController = require('./controllers/index');
 var subjectController = require('./controllers/subject');
@@ -130,7 +129,6 @@ app.get('/logout', function(req, res){
 var orm = new Waterline();
 orm.loadCollection(Waterline.Collection.extend(subjectCollection));
 orm.loadCollection(Waterline.Collection.extend(userCollection));
-orm.loadCollection(Waterline.Collection.extend(listCollection));
 
 // ORM indítása
 orm.initialize(waterlineConfig, function(err, models) {

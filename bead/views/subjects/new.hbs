@@ -11,7 +11,7 @@
         ">
             <label for="subject_name" class="col-lg-2 control-label">Tárgy neve</label>
             <div class="col-lg-10">
-                <input class="form-control" id="subject_name" name="subject_name" placeholder="Analízis 3" type="text" value="{{data.subject_name}}">
+                <input class="form-control" id="subject_name" name="subject_name" placeholder="Tárgy neve" type="text" value="{{data.subject_name}}">
                 {{#if validationErrors.subject_name}}
                     <span class="help-block">{{validationErrors.subject_name.msg}}</span>
                 {{/if}}
