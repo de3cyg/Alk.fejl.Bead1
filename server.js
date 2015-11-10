@@ -13,7 +13,7 @@ var indexController = require('./controllers/index');
 var subjectController = require('./controllers/subject');
 var loginController = require('./controllers/login');
 
-//------------------------------------------
+//-----------------------------------------
 
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
