@@ -74,6 +74,13 @@ Futtatása:
 
 A teszt a *user* modelt teszteli.
 
+###Funkcionális teszt
+
+A funkcionális teszteket a **Selenium IDE** *firefox* kiegészítőjével készítettem és a *test* mappában vannak.
+* 1: Új felhasználó regisztrálása, létező neptun esetén hiba
+* 2: Új tárgy felvétele, majd leadása
+* 3: Új tanár és diák regisztrálása, a diák felvesz két tárgyat majd a tanár törli őket.
+
 ##Felhasználói dokumentáció
 Az alkalmazás futtatásához **4.1.1**-es verziójú *Node* szükséges, valamint telepíteni kell különböző *node* modulokat a a **package.json** alapján.
 Ehhez használhatjuk a következő parancsot:   
