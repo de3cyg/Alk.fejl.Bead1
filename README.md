@@ -38,6 +38,8 @@ A **subject** tábla tartalmazza a tárgyak adatait:
 	- Tárgylista
 		+ tárgy törlése
 
+![Oldalvázlat](docs/img/rajz.png)
+
 ##Végpontok
 A következő lista tartalmazza az egyes végpontokon elérhető funkciókat
 
