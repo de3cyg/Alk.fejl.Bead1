@@ -100,7 +100,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(session({
-    cookie: { maxAge: 600000 },
+    cookie: { maxAge: 60000 },
     secret: 'titkos szoveg',
     resave: false,
     saveUninitialized: false,
@@ -132,7 +132,7 @@ orm.loadCollection(Waterline.Collection.extend(userCollection));
 
 // ORM indítása
 orm.initialize(waterlineConfig, function(err, models) {
-    if(err) throw err;
+    if(err)
     
     app.models = models.collections;
     app.connections = models.connections;
