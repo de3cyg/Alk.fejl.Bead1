@@ -36,7 +36,7 @@ router.get('/list', function (req, res) {
 
 router.post('/list', function (req, res) {
     var subs = [];
-    req.app.models.subject.find({user: req.user.id}).then(function(subjects){
+    req.app.models.subject.find().then(function(subjects){
       for(var i=0; i<subjects.length; i++){
           if(req.body[subjects[i].id]=='on'){
               subs.push(subjects[i].id);

@@ -32,7 +32,7 @@ passport.use('local-signup', new LocalStrategy({
         passReqToCallback: true,
     },   
     function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+        app.models.user.findOne({ neptun: neptun }, function(err, user) {
             if (err) { return done(err); }
             if (user) {
                 return done(null, false, { message: 'Létező neptun.' });
@@ -55,7 +55,7 @@ passport.use('local', new LocalStrategy({
         passReqToCallback: true,
     },
     function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+        app.models.user.findOne({ neptun: neptun }, function(err, user) {
             if (err) { return done(err); }
             if (!user || !user.validPassword(password)) {
                 return done(null, false, { message: 'Helytelen adatok.' });
@@ -134,8 +134,12 @@ orm.loadCollection(Waterline.Collection.extend(userCollection));
 orm.initialize(waterlineConfig, function(err, models) {
     if(err)
     
+    console.log(models)
+    
     app.models = models.collections;
     app.connections = models.connections;
+    
+    console.log(app.models)
     
     // Start Server
     var port = process.env.PORT || 3000;
