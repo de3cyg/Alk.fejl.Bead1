@@ -59,10 +59,27 @@ Néhány használt könyvtár:
 
 ###Felépítés
 Az alkalmazás **MVC** alapján készült, értelemszerűen a *models* mappában a modelleket, a *views* mappában a nézetet és a *controllers* mappában a vezérlőréteget megvalósító forrásállományok vannak. A **server.js** áálományt tekinthetjük az alkalmazás főprogramjának. Az adatok tárolása lokálisan történik egy *.db* kiterjesztésű fájban.
+
 ##Tesztelés
+A teszteléshez a **Mocha** tesztkeretrendszert használtam (elérhető a: https://mochajs.org/ címen).
+Telepítése: 
+> npm install mocha --save-dev
+
+A teszt futtatásához fel kell telepítenünk a *chai* modult is:
+> npm install chai --save-dev
+
+A tesztfájl a **models** mappában található **user.test.js** néven.
+Futtatása:
+> mocha models/user.test.js
+
+A teszt a *user* modelt teszteli.
 
 ##Felhasználói dokumentáció
 Az alkalmazás futtatásához **4.1.1**-es verziójú *Node* szükséges, valamint telepíteni kell különböző *node* modulokat a a **package.json** alapján.
 Ehhez használhatjuk a következő parancsot:   
  > npm install --production 
+ 
+Továbbá telepítenünk kell még a *bower*-t:
+> bower install
 
+A program elérhető a http://targyfelvetel.herokuapp.com címen
