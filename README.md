@@ -72,7 +72,7 @@ A tesztfájl a **models** mappában található **user.test.js** néven.
 Futtatása:
 > mocha models/user.test.js
 
-A teszt a *user* modelt teszteli.
+A teszt a *user* modelt teszteli. Létrrehoz egy új felhasználót, majd megkeresi azt. Ellenőrzi a jelszó helyességét.
 
 ###Funkcionális teszt
 
